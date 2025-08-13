@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖質検索サイト</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="search-form" autocomplete="off">
+            <div class="search-box">
+                <input type="text" id="food-search" placeholder="食品名を入力" />
+                <button id="submit" type="submit" aria-label="検索">
+                    <span class="search-icon">&#128269;</span>
+                </button>
+            </div>
+        </form>
+        <div class="bottom-buttons">
+            <button id="list-food-btn" type="button" class="list-btn">一覧</button>
+        </div>
+        <div id="howto-area" class="howto-area">
+            <div class="howto-content">
+                <h2>使いかた</h2>
+                <ul>
+                    <li>検索欄に食品名を入力し、検索ボタンまたはEnterキーで糖質量を調べられます。</li>
+                    <li>「一覧」ボタンで登録済み食品の編集・削除・追加ができます。</li>
+                    <li>見つからない場合は「一覧」から自分で食品を追加してください。</li>
+                    <li>追加した食品はブラウザに保存され、次回以降も利用できます。</li>
+                </ul>
+            </div>
+        </div>
+        <div id="food-table-area"></div>
+        <div id="result"></div>
+    </div>
+    <script src="./scripts/main.js"></script>
+    <script>
+        // ページ読み込み時に検索欄へフォーカス
+        window.onload = () => {
+            document.getElementById('food-search').focus();
+        };
+    </script>
+</body>
+</html>

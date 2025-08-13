@@ -1,0 +1,271 @@
+/* 食べ物系の明るい配色＋視認性重視 */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Meiryo', sans-serif;
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe0b2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fffde7;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(255, 167, 38, 0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
+    border: 2px solid #ffe082;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#food-search {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #ffb74d;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    width: 220px;
+    background: #fff;
+    color: #6d4c00;
+    font-weight: bold;
+    transition: border 0.2s;
+}
+#food-search:focus {
+    border: 2px solid #ffa726;
+    background: #fffde7;
+}
+
+#submit {
+    background: #ffb300;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1.1rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+}
+#submit:hover {
+    background: #ffa000;
+}
+
+.search-icon {
+    font-size: 1.3rem;
+}
+
+.bottom-buttons {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 1.2rem;  /* ←修正箇所 */
+    justify-content: center;   /* ←中央寄せに変更 */
+    align-items: center;
+    width: 100%;
+}
+
+.list-btn {
+    background: #81c784;
+    border: none;
+    border-radius: 7px;
+    padding: 0.6rem 1.3rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(129,199,132,0.08);
+}
+.list-btn:hover {
+    background: #388e3c;
+}
+
+#result {
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    color: #6d4c00;
+    min-height: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#food-table-area {
+    margin: 1.5rem auto 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-table {
+    border-collapse: collapse;
+    min-width: 340px;
+    background: #fffde7;
+    box-shadow: 0 2px 8px rgba(255, 183, 77, 0.10);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.food-table th, .food-table td {
+    border: 1px solid #ffe082;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+}
+.food-table th {
+    background: #ffe082;
+    color: #6d4c00;
+    font-size: 1.05rem;
+}
+.food-table input {
+    width: 90px;
+    padding: 0.2rem;
+    border: 1px solid #ffcc80;
+    border-radius: 5px;
+    background: #fffbe7;
+    color: #6d4c00;
+    font-size: 1rem;
+}
+.minus-btn {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 1.8em;
+    height: 1.8em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.minus-btn:hover {
+    background: #d84315;
+}
+.add-row-btn, .done-btn {
+    margin-top: 1rem;
+    background: #ffd54f;
+    color: #6d4c00;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,213,79,0.08);
+    transition: background 0.2s;
+}
+.add-row-btn:hover {
+    background: #ffb300;
+    color: #fff;
+}
+.done-btn:hover {
+    background: #81c784;
+    color: #fff;
+}
+
+.howto-btn {
+    background: #ffd54f;
+    color: #6d4c00;
+    border: none;
+    border-radius: 7px;
+    padding: 0.6rem 1.3rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    box-shadow: 0 2px 8px rgba(255,213,79,0.08);
+    transition: background 0.2s;
+}
+.howto-btn:hover {
+    background: #ffb300;
+    color: #fff;
+}
+.howto-area {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    background: #fffde7;
+    border: 1.5px solid #ffe082;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255, 183, 77, 0.10);
+    padding: 1rem 1.5rem;
+    color: #6d4c00;
+}
+.howto-content h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #ff9800;
+}
+.howto-content ul {
+    margin: 0.5em 0 0 1.2em;
+    padding: 0;
+    font-size: 1.05rem;
+}
+.howto-content li {
+    margin-bottom: 0.4em;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        min-width: 0;
+        width: 98vw;
+    }
+    #food-search {
+        width: 110px;
+        font-size: 1rem;
+    }
+    .food-table {
+        min-width: 0;
+        font-size: 0.95rem;
+    }
+}
