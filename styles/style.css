@@ -269,3 +269,57 @@ button:hover {
         font-size: 0.95rem;
     }
 }
+
+/* 追加・修正：スマホ横画面でもテーブル等が画面内に収まるようにする */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0.5rem;
+        min-width: 0;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    #food-search {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin-bottom: 0.5rem;
+    }
+    #submit {
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+    }
+    .bottom-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    #food-table-area {
+        width: 100vw;
+        min-width: 0;
+        overflow-x: auto;
+        padding: 0;
+        margin: 1rem 0 0 0;
+        box-sizing: border-box;
+    }
+    .food-table {
+        min-width: 320px;
+        width: 100%;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+    }
+    .food-table th, .food-table td {
+        padding: 0.4rem 0.3rem;
+        font-size: 0.95rem;
+        word-break: break-all;
+    }
+    .howto-area {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.95rem;
+    }
+}
